@@ -9,6 +9,6 @@ URL=https://archive.apache.org/dist/tomcat/tomcat-$MAJOR/v$VERSION/bin/$FILENAME
 mkdir -p temp
 cd temp
 wget --timestamping "$URL"
-wget --timestamping "${URL}.sha1"
-shasum -a 1 --binary --check "${FILENAME}.sha1"
+#wget --timestamping "${URL}.sha1"
+#shasum -a 1 --binary --check "${FILENAME}.sha1"
 shasum -a 256 --binary "$FILENAME"
